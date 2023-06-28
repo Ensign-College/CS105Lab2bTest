@@ -24,7 +24,7 @@ def compile_and_run_java(java_file):
         stdout=PIPE, 
         stderr=PIPE, 
         text=True)
-    inputs = "1\n3\n20\n15\n\n"
+    inputs = "5\n4\n10\n"
 
 
     try:
@@ -38,26 +38,10 @@ def compile_and_run_java(java_file):
 
     # # Print the output and error messages
 
-    expected_output = """This program will show the name of an apostle based on the order they were called with President Nelson as #1
-Enter a number between 1 and 15 to display the corresponding apostle (or press Enter to quit):
-Number 1 is: Russell M Nelson
-
-This program will show the name of an apostle based on the order they were called with President Nelson as #1
-Enter a number between 1 and 15 to display the corresponding apostle (or press Enter to quit):
-Number 3 is: M Russell Ballard
-
-This program will show the name of an apostle based on the order they were called with President Nelson as #1
-Enter a number between 1 and 15 to display the corresponding apostle (or press Enter to quit):
-That's not a valid choice. Try again.
-
-This program will show the name of an apostle based on the order they were called with President Nelson as #1
-Enter a number between 1 and 15 to display the corresponding apostle (or press Enter to quit):
-Number 15 is: Ulisses Soares
-
-This program will show the name of an apostle based on the order they were called with President Nelson as #1
-Enter a number between 1 and 15 to display the corresponding apostle (or press Enter to quit):
+    expected_output = """Please enter the width of the square: Please enter the width of the rectangle: Please enter the height of the rectangle: The area of the square with a width of 5 is 25.
+The area of the rectangle with a width of 4 and the height of 10 is 40.
 """
-    
+
     stdout_lines = stdout.splitlines()
     expected_output_lines = expected_output.splitlines()
 
